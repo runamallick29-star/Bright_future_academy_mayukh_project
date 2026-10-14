@@ -1,0 +1,2157 @@
+<meta name='viewport' content='width=device-width, initial-scale=1'/><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BrightFuture Academy | Coaching Institute</title>
+
+    <style>
+        /* ===== BASIC STYLES ===== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f8fafc;
+            color: #1e293b;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        /* ===== NAVIGATION BAR ===== */
+
+        header {
+            background: #ffffff;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav {
+            min-height: 75px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: bold;
+            color: #2563eb;
+        }
+
+        .logo span {
+            color: #f59e0b;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+
+        .nav-links a {
+            color: #334155;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #2563eb;
+        }
+
+        .nav-button {
+            background: #2563eb;
+            color: white !important;
+            padding: 11px 20px;
+            border-radius: 7px;
+        }
+
+        /* ===== HERO SECTION ===== */
+
+        .hero {
+            background: linear-gradient(135deg, #0f172a, #1d4ed8);
+            color: white;
+            padding: 100px 0;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .hero-text {
+            flex: 1;
+        }
+
+        .badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 8px 15px;
+            border-radius: 30px;
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
+
+        .hero h1 {
+            font-size: clamp(36px, 5vw, 58px);
+            line-height: 1.15;
+            margin-bottom: 22px;
+        }
+
+        .hero h1 span {
+            color: #fbbf24;
+        }
+
+        .hero p {
+            font-size: 17px;
+            color: #dbeafe;
+            max-width: 550px;
+            margin-bottom: 30px;
+        }
+
+        .button {
+            display: inline-block;
+            background: #fbbf24;
+            color: #111827;
+            padding: 14px 25px;
+            border-radius: 7px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .button:hover {
+            background: #f59e0b;
+            transform: translateY(-3px);
+        }
+
+        .secondary-button {
+            display: inline-block;
+            border: 1px solid white;
+            color: white;
+            padding: 13px 25px;
+            border-radius: 7px;
+            margin-left: 10px;
+        }
+
+        .hero-card {
+            flex: 0 0 320px;
+            background: white;
+            color: #1e293b;
+            padding: 35px;
+            border-radius: 18px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        .hero-icon {
+            font-size: 70px;
+            margin-bottom: 10px;
+        }
+
+        .hero-card h2 {
+            font-size: 25px;
+            margin-bottom: 10px;
+        }
+
+        .hero-card p {
+            color: #64748b;
+            margin-bottom: 20px;
+        }
+
+        .hero-card .button {
+            width: 100%;
+        }
+
+        /* ===== STATISTICS ===== */
+
+        .stats {
+            background: white;
+            padding: 30px 0;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.04);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            text-align: center;
+        }
+
+        .stat h2 {
+            font-size: 30px;
+            color: #2563eb;
+        }
+
+        .stat p {
+            color: #64748b;
+            font-size: 14px;
+        }
+
+        /* ===== COMMON SECTION STYLES ===== */
+
+        section {
+            padding: 80px 0;
+        }
+
+        .section-heading {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .section-heading h2 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .section-heading p {
+            color: #64748b;
+        }
+
+        .highlight {
+            color: #2563eb;
+        }
+
+        /* ===== COURSES ===== */
+
+        .courses-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .course-card {
+            background: white;
+            border: 1px solid #e2e8f0;
+            padding: 30px;
+            border-radius: 14px;
+            transition: 0.3s;
+        }
+
+        .course-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(37, 99, 235, 0.12);
+            border-color: #93c5fd;
+        }
+
+        .course-icon {
+            width: 65px;
+            height: 65px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #dbeafe;
+            border-radius: 12px;
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .course-card h3 {
+            font-size: 22px;
+            margin-bottom: 12px;
+        }
+
+        .course-card p {
+            color: #64748b;
+            margin-bottom: 20px;
+        }
+
+        .course-link {
+            color: #2563eb;
+            font-weight: bold;
+        }
+
+        /* ===== WHY CHOOSE US ===== */
+
+        .why-us {
+            background: #eff6ff;
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .why-card {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .why-card .icon {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        .why-card h3 {
+            margin-bottom: 10px;
+        }
+
+        .why-card p {
+            color: #64748b;
+        }
+
+        /* ===== TESTIMONIALS ===== */
+
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .review-card {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+        }
+
+        .stars {
+            color: #f59e0b;
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+
+        .review-card p {
+            color: #475569;
+            margin-bottom: 20px;
+        }
+
+        .review-card h4 {
+            color: #1e293b;
+        }
+
+        .review-card small {
+            color: #64748b;
+        }
+
+        /* ===== ADMISSION SECTION ===== */
+
+        .admission {
+            background: linear-gradient(135deg, #1d4ed8, #0f172a);
+            color: white;
+        }
+
+        .admission-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .admission-text h2 {
+            font-size: 38px;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        .admission-text p {
+            color: #dbeafe;
+            margin-bottom: 20px;
+        }
+
+        .admission-text ul {
+            list-style: none;
+        }
+
+        .admission-text li {
+            margin: 12px 0;
+        }
+
+        .enquiry-form {
+            background: white;
+            color: #1e293b;
+            padding: 35px;
+            border-radius: 15px;
+        }
+
+        .enquiry-form h3 {
+            font-size: 25px;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 17px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: 600;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #cbd5e1;
+            border-radius: 7px;
+            font: inherit;
+            outline: none;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: #2563eb;
+        }
+
+        .submit-button {
+            width: 100%;
+            padding: 14px;
+            background: #2563eb;
+            color: white;
+            border: none;
+            border-radius: 7px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .submit-button:hover {
+            background: #1d4ed8;
+        }
+
+        /* ===== FOOTER ===== */
+
+        footer {
+            background: #020617;
+            color: white;
+            padding: 45px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 35px;
+            margin-bottom: 30px;
+        }
+
+        footer h3,
+        footer h4 {
+            margin-bottom: 15px;
+        }
+
+        footer p {
+            color: #94a3b8;
+            margin-bottom: 10px;
+        }
+
+        footer a {
+            display: block;
+            color: #94a3b8;
+            margin-bottom: 8px;
+        }
+
+        footer a:hover {
+            color: white;
+        }
+
+        .copyright {
+            border-top: 1px solid #1e293b;
+            text-align: center;
+            padding-top: 20px;
+            color: #94a3b8;
+            font-size: 14px;
+        }
+
+        /* ===== MOBILE RESPONSIVENESS ===== */
+
+        @media (max-width: 900px) {
+            .hero-content {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .hero-card {
+                flex-basis: auto;
+                max-width: 420px;
+                width: 100%;
+                margin: auto;
+            }
+
+            .courses-grid,
+            .reviews-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .why-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .admission-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                width: 92%;
+            }
+
+            nav {
+                flex-direction: column;
+                padding: 15px 0;
+            }
+
+            .nav-links {
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 12px;
+            }
+
+            .nav-links a {
+                font-size: 13px;
+            }
+
+            .nav-button {
+                padding: 8px 12px;
+            }
+
+            .hero {
+                padding: 65px 0;
+            }
+
+            .hero h1 {
+                font-size: 37px;
+            }
+
+            .secondary-button {
+                margin: 12px 0 0;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+                row-gap: 25px;
+            }
+
+            section {
+                padding: 55px 0;
+            }
+
+            .section-heading h2 {
+                font-size: 29px;
+            }
+
+            .courses-grid,
+            .why-grid,
+            .reviews-grid,
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .admission-text h2 {
+                font-size: 31px;
+            }
+
+            .enquiry-form {
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVIGATION BAR -->
+
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#home" class="logo">
+                    Bright<span>Future</span>
+                </a>
+
+                <div class="nav-links">
+                    <a href="#home">Home</a>
+                    <a href="#courses">Courses</a>
+                    <a href="#about">About Us</a>
+                    <a href="#reviews">Reviews</a>
+                    <a href="#admission" class="nav-button">Join Now</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+
+    <!-- HERO SECTION -->
+
+    <section class="hero" id="home">
+        <div class="container hero-content">
+
+            <div class="hero-text">
+                <span class="badge">
+                    🎓 Admissions Open for New Batches
+                </span>
+
+                <h1>
+                    Build Your Future<br>
+                    With <span>BrightFuture</span>
+                </h1>
+
+                <p>
+                    Quality education, expert guidance, and
+                    personalised learning to help students achieve
+                    their academic goals with confidence.
+                </p>
+
+                <a href="#admission" class="button">
+                    Enquire for Admission →
+                </a>
+
+                <a href="#courses" class="secondary-button">
+                    Explore Courses
+                </a>
+            </div>
+
+            <div class="hero-card">
+                <div class="hero-icon">📚</div>
+
+                <h2>Learn. Grow. Succeed.</h2>
+
+                <p>
+                    A supportive learning environment designed
+                    to help every student progress.
+                </p>
+
+                <a href="#courses" class="button">
+                    View Our Courses
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- STATISTICS -->
+
+    <div class="stats">
+        <div class="container stats-grid">
+
+            <div class="stat">
+                <h2>Expert</h2>
+                <p>Faculty Support</p>
+            </div>
+
+            <div class="stat">
+                <h2>Small</h2>
+                <p>Learning Groups</p>
+            </div>
+
+            <div class="stat">
+                <h2>Regular</h2>
+                <p>Practice Tests</p>
+            </div>
+
+            <div class="stat">
+                <h2>Personal</h2>
+                <p>Student Guidance</p>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- COURSES SECTION -->
+
+    <section id="courses">
+        <div class="container">
+
+            <div class="section-heading">
+                <h2>Our Popular <span class="highlight">Courses</span></h2>
+
+                <p>
+                    Choose the right learning programme for your goals.
+                </p>
+            </div>
+
+            <div class="courses-grid">
+
+                <div class="course-card">
+                    <div class="course-icon">📐</div>
+
+                    <h3>Mathematics</h3>
+
+                    <p>
+                        Build strong mathematical concepts through
+                        problem-solving and regular practice.
+                    </p>
+
+                    <a href="#admission" class="course-link">
+                        Enquire Now →
+                    </a>
+                </div>
+
+                <div class="course-card">
+                    <div class="course-icon">🔬</div>
+
+                    <h3>Science</h3>
+
+                    <p>
+                        Understand Physics, Chemistry, and Biology
+                        through clear explanations and examples.
+                    </p>
+
+                    <a href="#admission" class="course-link">
+                        Enquire Now →
+                    </a>
+                </div>
+
+                <div class="course-card">
+                    <div class="course-icon">📖</div>
+
+                    <h3>English</h3>
+
+                    <p>
+                        Improve grammar, writing, reading, and
+                        communication skills.
+                    </p>
+
+                    <a href="#admission" class="course-link">
+                        Enquire Now →
+                    </a>
+                </div>
+
+                <div class="course-card">
+                    <div class="course-icon">🎯</div>
+
+                    <h3>Olympiad Preparation</h3>
+
+                    <p>
+                        Practise challenging questions and develop
+                        logical thinking and accuracy.
+                    </p>
+
+                    <a href="#admission" class="course-link">
+                        Enquire Now →
+                    </a>
+                </div>
+
+                <div class="course-card">
+                    <div class="course-icon">🏫</div>
+
+                    <h3>School Tuition</h3>
+
+                    <p>
+                        Concept-based tuition, homework support,
+                        and preparation for school examinations.
+                    </p>
+
+                    <a href="#admission" class="course-link">
+                        Enquire Now →
+                    </a>
+                </div>
+
+                <div class="course-card">
+                    <div class="course-icon">💻</div>
+
+                    <h3>Computer Studies</h3>
+
+                    <p>
+                        Learn computer fundamentals, programming,
+                        and essential digital skills.
+                    </p>
+
+                    <a href="#admission" class="course-link">
+                        Enquire Now →
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- WHY CHOOSE US -->
+
+    <section class="why-us" id="about">
+        <div class="container">
+
+            <div class="section-heading">
+                <h2>Why Choose <span class="highlight">Us?</span></h2>
+
+                <p>
+                    A learning experience focused on understanding
+                    and continuous improvement.
+                </p>
+            </div>
+
+            <div class="why-grid">
+
+                <div class="why-card">
+                    <div class="icon">👨‍🏫</div>
+
+                    <h3>Experienced Teachers</h3>
+
+                    <p>
+                        Learn with structured lessons and
+                        clear explanations.
+                    </p>
+                </div>
+
+                <div class="why-card">
+                    <div class="icon">📝</div>
+
+                    <h3>Regular Assessments</h3>
+
+                    <p>
+                        Track progress through practice questions
+                        and periodic tests.
+                    </p>
+                </div>
+
+                <div class="why-card">
+                    <div class="icon">🤝</div>
+
+                    <h3>Personal Attention</h3>
+
+                    <p>
+                        Get guidance to strengthen concepts
+                        and address learning difficulties.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- STUDENT REVIEWS -->
+
+    <section id="reviews">
+        <div class="container">
+
+            <div class="section-heading">
+                <h2>What Students <span class="highlight">Say</span></h2>
+
+                <p>
+                    A good learning environment makes a difference.
+                </p>
+            </div>
+
+            <div class="reviews-grid">
+
+                <div class="review-card">
+                    <div class="stars">★★★★★</div>
+
+                    <p>
+                        "The lessons are easy to understand,
+                        and the practice questions help me
+                        prepare for examinations."
+                    </p>
+
+                    <h4>Student Review</h4>
+                    <small>School Tuition</small>
+                </div>
+
+                <div class="review-card">
+                    <div class="stars">★★★★★</div>
+
+                    <p>
+                        "I enjoy learning concepts step by step.
+                        The regular tests help me identify
+                        the topics I need to practise."
+                    </p>
+
+                    <h4>Student Review</h4>
+                    <small>Science Classes</small>
+                </div>
+
+                <div class="review-card">
+                    <div class="stars">★★★★★</div>
+
+                    <p>
+                        "The learning environment is supportive,
+                        and I get more opportunities to
+                        practise difficult questions."
+                    </p>
+
+                    <h4>Student Review</h4>
+                    <small>Mathematics Classes</small>
+                </div>
+
+            </div>
+
+            <p style="text-align:center; color:#64748b; margin-top:20px;">
+                Note: Replace these sample reviews with genuine
+                feedback from your students.
+            </p>
+
+        </div>
+    </section>
+
+
+    <!-- ADMISSION ENQUIRY -->
+
+    <section class="admission" id="admission">
+        <div class="container admission-grid">
+
+            <div class="admission-text">
+                <h2>
+                    Start Your Learning Journey Today!
+                </h2>
+
+                <p>
+                    Take the first step towards stronger concepts
+                    and better learning habits.
+                </p>
+
+                <ul>
+                    <li>✓ Multiple subjects and courses</li>
+                    <li>✓ Structured learning programmes</li>
+                    <li>✓ Regular practice and revision</li>
+                    <li>✓ Guidance for academic improvement</li>
+                </ul>
+            </div>
+
+            <form class="enquiry-form" id="enquiryForm">
+
+                <h3>Admission Enquiry</h3>
+
+                <div class="form-group">
+                    <label for="studentName">Student Name</label>
+
+                    <input
+                        type="text"
+                        id="studentName"
+                        placeholder="Enter student name"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Contact Number</label>
+
+                    <input
+                        type="tel"
+                        id="phone"
+                        placeholder="Enter contact number"
+                        pattern="[0-9]{10}"
+                        maxlength="10"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="class">Select Class</label>
+
+                    <select id="class" required>
+                        <option value="">Choose your class</option>
+                        <option>Class 5</option>
+                        <option>Class 6</option>
+                        <option>Class 7</option>
+                        <option>Class 8</option>
+                        <option>Class 9</option>
+                        <option>Class 10</option>
+                        <option>Class 11</option>
+                        <option>Class 12</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="subject">Interested Course</label>
+
+                    <select id="subject" required>
+                        <option value="">Choose a course</option>
+                        <option>Mathematics</option>
+                        <option>Science</option>
+                        <option>English</option>
+                        <option>Olympiad Preparation</option>
+                        <option>School Tuition</option>
+                        <option>Computer Studies</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message (Optional)</label>
+
+                    <textarea
+                        id="message"
+                        rows="3"
+                        placeholder="Write your enquiry"
+                    ></textarea>
+                </div>
+
+                <button type="submit" class="submit-button">
+                    Submit Enquiry →
+                </button>
+
+                <p id="formMessage"
+                   role="status"
+                   style="margin-top:15px; color:#166534;">
+                </p>
+
+            </form>
+
+        </div>
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+        <div class="container">
+
+            <div class="footer-grid">
+
+                <div>
+                    <h3 class="logo">
+                        Bright<span>Future</span>
+                    </h3>
+
+                    <p>
+                        Helping students learn with confidence
+                        through quality education and guidance.
+                    </p>
+                </div>
+
+                <div>
+                    <h4>Quick Links</h4>
+
+                    <a href="#home">Home</a>
+                    <a href="#courses">Courses</a>
+                    <a href="#about">About Us</a>
+                    <a href="#reviews">Reviews</a>
+                </div>
+
+                <div>
+                    <h4>Contact Us</h4>
+
+                    <p>Email: your-email@example.com</p>
+                    <p>Phone: +91 XXXXXXXXXX</p>
+                    <p>Address: Your City, India</p>
+                </div>
+
+            </div>
+
+            <div class="copyright">
+                <p>
+                    &copy; <span id="year"></span>
+                    BrightFuture Academy. All rights reserved.
+                </p>
+            </div>
+
+        </div>
+    </footer>
+
+
+    <!-- SMALL JAVASCRIPT FOR FORM FEEDBACK -->
+
+    <script>
+        document.getElementById("year").textContent =
+            new Date().getFullYear();
+
+        document.getElementById("enquiryForm")
+            .addEventListener("submit", function(event) {
+
+                event.preventDefault();
+
+                document.getElementById("formMessage").textContent =
+                    "Thank you! The form works, but your enquiry has not been sent. Connect a backend to receive submissions.";
+
+            });
+    </script>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BrightFuture Academy | Coaching Institute</title>
+
+    <style>
+        /* ===== BASIC STYLES ===== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f8fafc;
+            color: #1e293b;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        /* ===== NAVIGATION BAR ===== */
+
+        header {
+            background: #ffffff;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav {
+            min-height: 75px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: bold;
+            color: #2563eb;
+        }
+
+        .logo span {
+            color: #f59e0b;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+
+        .nav-links a {
+            color: #334155;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #2563eb;
+        }
+
+        .nav-button {
+            background: #2563eb;
+            color: white !important;
+            padding: 11px 20px;
+            border-radius: 7px;
+        }
+
+        /* ===== HERO SECTION ===== */
+
+        .hero {
+            background: linear-gradient(135deg, #0f172a, #1d4ed8);
+            color: white;
+            padding: 100px 0;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .hero-text {
+            flex: 1;
+        }
+
+        .badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 8px 15px;
+            border-radius: 30px;
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
+
+        .hero h1 {
+            font-size: clamp(36px, 5vw, 58px);
+            line-height: 1.15;
+            margin-bottom: 22px;
+        }
+
+        .hero h1 span {
+            color: #fbbf24;
+        }
+
+        .hero p {
+            font-size: 17px;
+            color: #dbeafe;
+            max-width: 550px;
+            margin-bottom: 30px;
+        }
+
+        .button {
+            display: inline-block;
+            background: #fbbf24;
+            color: #111827;
+            padding: 14px 25px;
+            border-radius: 7px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .button:hover {
+            background: #f59e0b;
+            transform: translateY(-3px);
+        }
+
+        .secondary-button {
+            display: inline-block;
+            border: 1px solid white;
+            color: white;
+            padding: 13px 25px;
+            border-radius: 7px;
+            margin-left: 10px;
+        }
+
+        .hero-card {
+            flex: 0 0 320px;
+            background: white;
+            color: #1e293b;
+            padding: 35px;
+            border-radius: 18px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        .hero-icon {
+            font-size: 70px;
+            margin-bottom: 10px;
+        }
+
+        .hero-card h2 {
+            font-size: 25px;
+            margin-bottom: 10px;
+        }
+
+        .hero-card p {
+            color: #64748b;
+            margin-bottom: 20px;
+        }
+
+        .hero-card .button {
+            width: 100%;
+        }
+
+        /* ===== STATISTICS ===== */
+
+        .stats {
+            background: white;
+            padding: 30px 0;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.04);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            text-align: center;
+        }
+
+        .stat h2 {
+            font-size: 30px;
+            color: #2563eb;
+        }
+
+        .stat p {
+            color: #64748b;
+            font-size: 14px;
+        }
+
+        /* ===== COMMON SECTION STYLES ===== */
+
+        section {
+            padding: 80px 0;
+        }
+
+        .section-heading {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .section-heading h2 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .section-heading p {
+            color: #64748b;
+        }
+
+        .highlight {
+            color: #2563eb;
+        }
+
+        /* ===== COURSES ===== */
+
+        .courses-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .course-card {
+            background: white;
+            border: 1px solid #e2e8f0;
+            padding: 30px;
+            border-radius: 14px;
+            transition: 0.3s;
+        }
+
+        .course-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(37, 99, 235, 0.12);
+            border-color: #93c5fd;
+        }
+
+        .course-icon {
+            width: 65px;
+            height: 65px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #dbeafe;
+            border-radius: 12px;
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .course-card h3 {
+            font-size: 22px;
+            margin-bottom: 12px;
+        }
+
+        .course-card p {
+            color: #64748b;
+            margin-bottom: 20px;
+        }
+
+        .course-link {
+            color: #2563eb;
+            font-weight: bold;
+        }
+
+        /* ===== WHY CHOOSE US ===== */
+
+        .why-us {
+            background: #eff6ff;
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .why-card {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .why-card .icon {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        .why-card h3 {
+            margin-bottom: 10px;
+        }
+
+        .why-card p {
+            color: #64748b;
+        }
+
+        /* ===== TESTIMONIALS ===== */
+
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .review-card {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+        }
+
+        .stars {
+            color: #f59e0b;
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+
+        .review-card p {
+            color: #475569;
+            margin-bottom: 20px;
+        }
+
+        .review-card h4 {
+            color: #1e293b;
+        }
+
+        .review-card small {
+            color: #64748b;
+        }
+
+        /* ===== ADMISSION SECTION ===== */
+
+        .admission {
+            background: linear-gradient(135deg, #1d4ed8, #0f172a);
+            color: white;
+        }
+
+        .admission-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .admission-text h2 {
+            font-size: 38px;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        .admission-text p {
+            color: #dbeafe;
+            margin-bottom: 20px;
+        }
+
+        .admission-text ul {
+            list-style: none;
+        }
+
+        .admission-text li {
+            margin: 12px 0;
+        }
+
+        .enquiry-form {
+            background: white;
+            color: #1e293b;
+            padding: 35px;
+            border-radius: 15px;
+        }
+
+        .enquiry-form h3 {
+            font-size: 25px;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 17px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: 600;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #cbd5e1;
+            border-radius: 7px;
+            font: inherit;
+            outline: none;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: #2563eb;
+        }
+
+        .submit-button {
+            width: 100%;
+            padding: 14px;
+            background: #2563eb;
+            color: white;
+            border: none;
+            border-radius: 7px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .submit-button:hover {
+            background: #1d4ed8;
+        }
+
+        /* ===== FOOTER ===== */
+
+        footer {
+            background: #020617;
+            color: white;
+            padding: 45px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 35px;
+            margin-bottom: 30px;
+        }
+
+        footer h3,
+        footer h4 {
+            margin-bottom: 15px;
+        }
+
+        footer p {
+            color: #94a3b8;
+            margin-bottom: 10px;
+        }
+
+        footer a {
+            display: block;
+            color: #94a3b8;
+            margin-bottom: 8px;
+        }
+
+        footer a:hover {
+            color: white;
+        }
+
+        .copyright {
+            border-top: 1px solid #1e293b;
+            text-align: center;
+            padding-top: 20px;
+            color: #94a3b8;
+            font-size: 14px;
+        }
+
+        /* ===== MOBILE RESPONSIVENESS ===== */
+
+        @media (max-width: 900px) {
+            .hero-content {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .hero-card {
+                flex-basis: auto;
+                max-width: 420px;
+                width: 100%;
+                margin: auto;
+            }
+
+            .courses-grid,
+            .reviews-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .why-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .admission-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                width: 92%;
+            }
+
+            nav {
+                flex-direction: column;
+                padding: 15px 0;
+            }
+
+            .nav-links {
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 12px;
+            }
+
+            .nav-links a {
+                font-size: 13px;
+            }
+
+            .nav-button {
+                padding: 8px 12px;
+            }
+
+            .hero {
+                padding: 65px 0;
+            }
+
+            .hero h1 {
+                font-size: 37px;
+            }
+
+            .secondary-button {
+                margin: 12px 0 0;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+                row-gap: 25px;
+            }
+
+            section {
+                padding: 55px 0;
+            }
+
+            .section-heading h2 {
+                font-size: 29px;
+            }
+
+            .courses-grid,
+            .why-grid,
+            .reviews-grid,
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .admission-text h2 {
+                font-size: 31px;
+            }
+
+            .enquiry-form {
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVIGATION BAR -->
+
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#home" class="logo">
+                    Bright<span>Future</span>
+                </a>
+
+                <div class="nav-links">
+                    <a href="#home">Home</a>
+                    <a href="#courses">Courses</a>
+                    <a href="#about">About Us</a>
+                    <a href="#reviews">Reviews</a>
+                    <a href="#admission" class="nav-button">Join Now</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+
+    <!-- HERO SECTION -->
+
+    <section class="hero" id="home">
+        <div class="container hero-content">
+
+            <div class="hero-text">
+                <span class="badge">
+                    🎓 Admissions Open for New Batches
+                </span>
+
+                <h1>
+                    Build Your Future<br>
+                    With <span>BrightFuture</span>
+                </h1>
+
+                <p>
+                    Quality education, expert guidance, and
+                    personalised learning to help students achieve
+                    their academic goals with confidence.
+                </p>
+
+                <a href="#admission" class="button">
+                    Enquire for Admission →
+                </a>
+
+                <a href="#courses" class="secondary-button">
+                    Explore Courses
+                </a>
+            </div>
+
+            <div class="hero-card">
+                <div class="hero-icon">📚</div>
+
+                <h2>Learn. Grow. Succeed.</h2>
+
+                <p>
+                    A supportive learning environment designed
+                    to help every student progress.
+                </p>
+
+                <a href="#courses" class="button">
+                    View Our Courses
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- STATISTICS -->
+
+    <div class="stats">
+        <div class="container stats-grid">
+
+            <div class="stat">
+                <h2>Expert</h2>
+                <p>Faculty Support</p>
+            </div>
+
+            <div class="stat">
+                <h2>Small</h2>
+                <p>Learning Groups</p>
+            </div>
+
+            <div class="stat">
+                <h2>Regular</h2>
+                <p>Practice Tests</p>
+            </div>
+
+            <div class="stat">
+                <h2>Personal</h2>
+                <p>Student Guidance</p>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- COURSES SECTION -->
+
+    <section id="courses">
+        <div class="container">
+
+            <div class="section-heading">
+                <h2>Our Popular <span class="highlight">Courses</span></h2>
+
+                <p>
+                    Choose the right learning programme for your goals.
+                </p>
+            </div>
+
+            <div class="courses-grid">
+
+                <div class="course-card">
+                    <div class="course-icon">📐</div>
+
+                    <h3>Mathematics</h3>
+
+                    <p>
+                        Build strong mathematical concepts through
+                        problem-solving and regular practice.
+                    </p>
+
+                    <a href="#admission" class="course-link">
+                        Enquire Now →
+                    </a>
+                </div>
+
+                <div class="course-card">
+                    <div class="course-icon">🔬</div>
+
+                    <h3>Science</h3>
+
+                    <p>
+                        Understand Physics, Chemistry, and Biology
+                        through clear explanations and examples.
+                    </p>
+
+                    <a href="#admission" class="course-link">
+                        Enquire Now →
+                    </a>
+                </div>
+
+                <div class="course-card">
+                    <div class="course-icon">📖</div>
+
+                    <h3>English</h3>
+
+                    <p>
+                        Improve grammar, writing, reading, and
+                        communication skills.
+                    </p>
+
+                    <a href="#admission" class="course-link">
+                        Enquire Now →
+                    </a>
+                </div>
+
+                <div class="course-card">
+                    <div class="course-icon">🎯</div>
+
+                    <h3>Olympiad Preparation</h3>
+
+                    <p>
+                        Practise challenging questions and develop
+                        logical thinking and accuracy.
+                    </p>
+
+                    <a href="#admission" class="course-link">
+                        Enquire Now →
+                    </a>
+                </div>
+
+                <div class="course-card">
+                    <div class="course-icon">🏫</div>
+
+                    <h3>School Tuition</h3>
+
+                    <p>
+                        Concept-based tuition, homework support,
+                        and preparation for school examinations.
+                    </p>
+
+                    <a href="#admission" class="course-link">
+                        Enquire Now →
+                    </a>
+                </div>
+
+                <div class="course-card">
+                    <div class="course-icon">💻</div>
+
+                    <h3>Computer Studies</h3>
+
+                    <p>
+                        Learn computer fundamentals, programming,
+                        and essential digital skills.
+                    </p>
+
+                    <a href="#admission" class="course-link">
+                        Enquire Now →
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- WHY CHOOSE US -->
+
+    <section class="why-us" id="about">
+        <div class="container">
+
+            <div class="section-heading">
+                <h2>Why Choose <span class="highlight">Us?</span></h2>
+
+                <p>
+                    A learning experience focused on understanding
+                    and continuous improvement.
+                </p>
+            </div>
+
+            <div class="why-grid">
+
+                <div class="why-card">
+                    <div class="icon">👨‍🏫</div>
+
+                    <h3>Experienced Teachers</h3>
+
+                    <p>
+                        Learn with structured lessons and
+                        clear explanations.
+                    </p>
+                </div>
+
+                <div class="why-card">
+                    <div class="icon">📝</div>
+
+                    <h3>Regular Assessments</h3>
+
+                    <p>
+                        Track progress through practice questions
+                        and periodic tests.
+                    </p>
+                </div>
+
+                <div class="why-card">
+                    <div class="icon">🤝</div>
+
+                    <h3>Personal Attention</h3>
+
+                    <p>
+                        Get guidance to strengthen concepts
+                        and address learning difficulties.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- STUDENT REVIEWS -->
+
+    <section id="reviews">
+        <div class="container">
+
+            <div class="section-heading">
+                <h2>What Students <span class="highlight">Say</span></h2>
+
+                <p>
+                    A good learning environment makes a difference.
+                </p>
+            </div>
+
+            <div class="reviews-grid">
+
+                <div class="review-card">
+                    <div class="stars">★★★★★</div>
+
+                    <p>
+                        "The lessons are easy to understand,
+                        and the practice questions help me
+                        prepare for examinations."
+                    </p>
+
+                    <h4>Student Review</h4>
+                    <small>School Tuition</small>
+                </div>
+
+                <div class="review-card">
+                    <div class="stars">★★★★★</div>
+
+                    <p>
+                        "I enjoy learning concepts step by step.
+                        The regular tests help me identify
+                        the topics I need to practise."
+                    </p>
+
+                    <h4>Student Review</h4>
+                    <small>Science Classes</small>
+                </div>
+
+                <div class="review-card">
+                    <div class="stars">★★★★★</div>
+
+                    <p>
+                        "The learning environment is supportive,
+                        and I get more opportunities to
+                        practise difficult questions."
+                    </p>
+
+                    <h4>Student Review</h4>
+                    <small>Mathematics Classes</small>
+                </div>
+
+            </div>
+
+            <p style="text-align:center; color:#64748b; margin-top:20px;">
+                Note: Replace these sample reviews with genuine
+                feedback from your students.
+            </p>
+
+        </div>
+    </section>
+
+
+    <!-- ADMISSION ENQUIRY -->
+
+    <section class="admission" id="admission">
+        <div class="container admission-grid">
+
+            <div class="admission-text">
+                <h2>
+                    Start Your Learning Journey Today!
+                </h2>
+
+                <p>
+                    Take the first step towards stronger concepts
+                    and better learning habits.
+                </p>
+
+                <ul>
+                    <li>✓ Multiple subjects and courses</li>
+                    <li>✓ Structured learning programmes</li>
+                    <li>✓ Regular practice and revision</li>
+                    <li>✓ Guidance for academic improvement</li>
+                </ul>
+            </div>
+
+            <form class="enquiry-form" id="enquiryForm">
+
+                <h3>Admission Enquiry</h3>
+
+                <div class="form-group">
+                    <label for="studentName">Student Name</label>
+
+                    <input
+                        type="text"
+                        id="studentName"
+                        placeholder="Enter student name"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Contact Number</label>
+
+                    <input
+                        type="tel"
+                        id="phone"
+                        placeholder="Enter contact number"
+                        pattern="[0-9]{10}"
+                        maxlength="10"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="class">Select Class</label>
+
+                    <select id="class" required>
+                        <option value="">Choose your class</option>
+                        <option>Class 5</option>
+                        <option>Class 6</option>
+                        <option>Class 7</option>
+                        <option>Class 8</option>
+                        <option>Class 9</option>
+                        <option>Class 10</option>
+                        <option>Class 11</option>
+                        <option>Class 12</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="subject">Interested Course</label>
+
+                    <select id="subject" required>
+                        <option value="">Choose a course</option>
+                        <option>Mathematics</option>
+                        <option>Science</option>
+                        <option>English</option>
+                        <option>Olympiad Preparation</option>
+                        <option>School Tuition</option>
+                        <option>Computer Studies</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message (Optional)</label>
+
+                    <textarea
+                        id="message"
+                        rows="3"
+                        placeholder="Write your enquiry"
+                    ></textarea>
+                </div>
+
+                <button type="submit" class="submit-button">
+                    Submit Enquiry →
+                </button>
+
+                <p id="formMessage"
+                   role="status"
+                   style="margin-top:15px; color:#166534;">
+                </p>
+
+            </form>
+
+        </div>
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+        <div class="container">
+
+            <div class="footer-grid">
+
+                <div>
+                    <h3 class="logo">
+                        Bright<span>Future</span>
+                    </h3>
+
+                    <p>
+                        Helping students learn with confidence
+                        through quality education and guidance.
+                    </p>
+                </div>
+
+                <div>
+                    <h4>Quick Links</h4>
+
+                    <a href="#home">Home</a>
+                    <a href="#courses">Courses</a>
+                    <a href="#about">About Us</a>
+                    <a href="#reviews">Reviews</a>
+                </div>
+
+                <div>
+                    <h4>Contact Us</h4>
+
+                    <p>Email: your-email@example.com</p>
+                    <p>Phone: +91 XXXXXXXXXX</p>
+                    <p>Address: Your City, India</p>
+                </div>
+
+            </div>
+
+            <div class="copyright">
+                <p>
+                    &copy; <span id="year"></span>
+                    BrightFuture Academy. All rights reserved.
+                </p>
+            </div>
+
+        </div>
+    </footer>
+
+
+    <!-- SMALL JAVASCRIPT FOR FORM FEEDBACK -->
+
+    <script>
+        document.getElementById("year").textContent =
+            new Date().getFullYear();
+
+        document.getElementById("enquiryForm")
+            .addEventListener("submit", function(event) {
+
+                event.preventDefault();
+
+                document.getElementById("formMessage").textContent =
+                    "Thank you! The form works, but your enquiry has not been sent. Connect a backend to receive submissions.";
+
+            });
+    </script>
+
+</body>
+</html>
